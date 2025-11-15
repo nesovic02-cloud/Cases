@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(32, 41, 81, 0.9), #05060f 70%);
+  color: #f5f7ff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6c4bff, #00f5ff);
+  border-radius: 999px;
+}
+
+@keyframes case-roll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-60%);
+  }
+}
+
+.case-roll-active {
+  animation: case-roll 4s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
